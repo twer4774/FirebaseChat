@@ -8,10 +8,10 @@ target 'FirebaseChat' do
   # Pods for FirebaseChat
 	pod 'MessageKit'
 	pod 'Firebase/Core'
-  	pod 'Firebase/Auth'
-  	pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
  	pod 'Firebase/Firestore'
-  	pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Google'
 
   target 'FirebaseChatTests' do
     inherit! :search_paths
