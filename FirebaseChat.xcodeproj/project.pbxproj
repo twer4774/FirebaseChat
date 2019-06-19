@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		156B65F49617964FBF5BE899 /* Pods_FirebaseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E59CB880130F813932266E3 /* Pods_FirebaseChatUITests.framework */; };
+		477CF85B22B0A7E60097022B /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF85A22B0A7E60097022B /* ChatDetailView.swift */; };
+		477CF85D22B0A80C0097022B /* ChatDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF85C22B0A80C0097022B /* ChatDetailInteractor.swift */; };
+		477CF85F22B0A82E0097022B /* ChatDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF85E22B0A82E0097022B /* ChatDetailPresenter.swift */; };
+		477CF86122B0A8460097022B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF86022B0A8460097022B /* Message.swift */; };
+		477CF86322B0A8530097022B /* ChatDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF86222B0A8530097022B /* ChatDetailRouter.swift */; };
+		477CF86522B0A85E0097022B /* ChatDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CF86422B0A85E0097022B /* ChatDetailProtocols.swift */; };
+		47ABB25122AE8691006ED57B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25022AE8691006ED57B /* Chat.swift */; };
+		47ABB25322AE876B006ED57B /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25222AE876B006ED57B /* ChatListInteractor.swift */; };
+		47ABB25522AE8778006ED57B /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25422AE8778006ED57B /* ChatListPresenter.swift */; };
+		47ABB25922AE8797006ED57B /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25822AE8797006ED57B /* ChatListRouter.swift */; };
+		47ABB25B22AE87A2006ED57B /* ChatListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25A22AE87A2006ED57B /* ChatListProtocols.swift */; };
+		47ABB25D22AE8B94006ED57B /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ABB25C22AE8B94006ED57B /* ChatListCell.swift */; };
 		47AFBF2622ADF0D700B0F261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AFBF2522ADF0D700B0F261 /* AppDelegate.swift */; };
 		47AFBF2A22ADF0D700B0F261 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AFBF2922ADF0D700B0F261 /* LoginView.swift */; };
 		47AFBF2D22ADF0D700B0F261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AFBF2B22ADF0D700B0F261 /* Main.storyboard */; };
@@ -20,6 +32,7 @@
 		47AFBF7022AE079100B0F261 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AFBF6F22AE079100B0F261 /* LoginRouter.swift */; };
 		47AFBF7222AE07A000B0F261 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AFBF7122AE07A000B0F261 /* LoginProtocols.swift */; };
 		47AFBF7422AE4A2D00B0F261 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AFBF7322AE4A2D00B0F261 /* ChatListView.swift */; };
+		47BF4ABA22B2818900DAECED /* ChatListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF4AB922B2818900DAECED /* ChatListDataManager.swift */; };
 		B1D1FFECC05698ECF9C1BF21 /* Pods_FirebaseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50BCEBF73F842F14480C8F1 /* Pods_FirebaseChatTests.framework */; };
 		C4F364548591123B3308804D /* Pods_FirebaseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25D500C85FBD756B5FC58FE /* Pods_FirebaseChat.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +56,18 @@
 
 /* Begin PBXFileReference section */
 		31503EC1502764639F91E83D /* Pods-FirebaseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChatUITests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseChatUITests/Pods-FirebaseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		477CF85A22B0A7E60097022B /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		477CF85C22B0A80C0097022B /* ChatDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatDetailInteractor.swift; path = FirebaseChat/ChatDetail/View/ChatDetailInteractor.swift; sourceTree = SOURCE_ROOT; };
+		477CF85E22B0A82E0097022B /* ChatDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatDetailPresenter.swift; path = FirebaseChat/ChatDetail/View/ChatDetailPresenter.swift; sourceTree = SOURCE_ROOT; };
+		477CF86022B0A8460097022B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = FirebaseChat/ChatDetail/View/Message.swift; sourceTree = SOURCE_ROOT; };
+		477CF86222B0A8530097022B /* ChatDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatDetailRouter.swift; path = FirebaseChat/ChatDetail/View/ChatDetailRouter.swift; sourceTree = SOURCE_ROOT; };
+		477CF86422B0A85E0097022B /* ChatDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatDetailProtocols.swift; path = FirebaseChat/ChatDetail/View/ChatDetailProtocols.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25022AE8691006ED57B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Chat.swift; path = FirebaseChat/ChatList/View/Chat.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25222AE876B006ED57B /* ChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatListInteractor.swift; path = FirebaseChat/ChatList/View/ChatListInteractor.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25422AE8778006ED57B /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatListPresenter.swift; path = FirebaseChat/ChatList/View/ChatListPresenter.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25822AE8797006ED57B /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatListRouter.swift; path = FirebaseChat/ChatList/View/ChatListRouter.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25A22AE87A2006ED57B /* ChatListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatListProtocols.swift; path = FirebaseChat/ChatList/View/ChatListProtocols.swift; sourceTree = SOURCE_ROOT; };
+		47ABB25C22AE8B94006ED57B /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		47AFBF2222ADF0D700B0F261 /* FirebaseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47AFBF2522ADF0D700B0F261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47AFBF2922ADF0D700B0F261 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -61,6 +86,7 @@
 		47AFBF6F22AE079100B0F261 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		47AFBF7122AE07A000B0F261 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		47AFBF7322AE4A2D00B0F261 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		47BF4AB922B2818900DAECED /* ChatListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDataManager.swift; sourceTree = "<group>"; };
 		6AAE2AA69805A8A67FCEFF10 /* Pods-FirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.release.xcconfig"; path = "Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
 		7E59CB880130F813932266E3 /* Pods_FirebaseChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		880414F42726834FA526886C /* Pods-FirebaseChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChatTests.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseChatTests/Pods-FirebaseChatTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +189,7 @@
 				47AFBF5B22ADF3C200B0F261 /* Entity */,
 				47AFBF5C22ADF3CF00B0F261 /* Router */,
 				47AFBF5722ADF39F00B0F261 /* Protocols */,
+				47BF4AB922B2818900DAECED /* ChatListDataManager.swift */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -183,6 +210,7 @@
 		47AFBF5722ADF39F00B0F261 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				47ABB25A22AE87A2006ED57B /* ChatListProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -191,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				47AFBF7322AE4A2D00B0F261 /* ChatListView.swift */,
+				47ABB25C22AE8B94006ED57B /* ChatListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,13 +227,15 @@
 		47AFBF5922ADF3AF00B0F261 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				47ABB25222AE876B006ED57B /* ChatListInteractor.swift */,
 			);
-			path = Interactor;
+			name = Interactor;
 			sourceTree = "<group>";
 		};
 		47AFBF5A22ADF3BA00B0F261 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				47ABB25422AE8778006ED57B /* ChatListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -212,6 +243,7 @@
 		47AFBF5B22ADF3C200B0F261 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				47ABB25022AE8691006ED57B /* Chat.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -219,6 +251,7 @@
 		47AFBF5C22ADF3CF00B0F261 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				47ABB25822AE8797006ED57B /* ChatListRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -226,6 +259,7 @@
 		47AFBF5D22ADF3F200B0F261 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				477CF85A22B0A7E60097022B /* ChatDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +267,7 @@
 		47AFBF5E22ADF3F300B0F261 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				477CF86422B0A85E0097022B /* ChatDetailProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -240,6 +275,7 @@
 		47AFBF5F22ADF3F300B0F261 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				477CF86022B0A8460097022B /* Message.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -247,6 +283,7 @@
 		47AFBF6022ADF3F300B0F261 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				477CF85C22B0A80C0097022B /* ChatDetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -254,6 +291,7 @@
 		47AFBF6122ADF3F300B0F261 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				477CF85E22B0A82E0097022B /* ChatDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -261,6 +299,7 @@
 		47AFBF6222ADF3F300B0F261 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				477CF86222B0A8530097022B /* ChatDetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -588,10 +627,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				477CF85F22B0A82E0097022B /* ChatDetailPresenter.swift in Sources */,
+				47BF4ABA22B2818900DAECED /* ChatListDataManager.swift in Sources */,
+				47ABB25922AE8797006ED57B /* ChatListRouter.swift in Sources */,
 				47AFBF6D22AE078300B0F261 /* LoginPresenter.swift in Sources */,
+				477CF86322B0A8530097022B /* ChatDetailRouter.swift in Sources */,
 				47AFBF7222AE07A000B0F261 /* LoginProtocols.swift in Sources */,
+				47ABB25322AE876B006ED57B /* ChatListInteractor.swift in Sources */,
+				47ABB25522AE8778006ED57B /* ChatListPresenter.swift in Sources */,
+				477CF85D22B0A80C0097022B /* ChatDetailInteractor.swift in Sources */,
+				47ABB25122AE8691006ED57B /* Chat.swift in Sources */,
+				477CF85B22B0A7E60097022B /* ChatDetailView.swift in Sources */,
+				47ABB25B22AE87A2006ED57B /* ChatListProtocols.swift in Sources */,
 				47AFBF2A22ADF0D700B0F261 /* LoginView.swift in Sources */,
+				477CF86522B0A85E0097022B /* ChatDetailProtocols.swift in Sources */,
 				47AFBF7022AE079100B0F261 /* LoginRouter.swift in Sources */,
+				47ABB25D22AE8B94006ED57B /* ChatListCell.swift in Sources */,
+				477CF86122B0A8460097022B /* Message.swift in Sources */,
 				47AFBF7422AE4A2D00B0F261 /* ChatListView.swift in Sources */,
 				47AFBF2622ADF0D700B0F261 /* AppDelegate.swift in Sources */,
 			);
@@ -812,7 +864,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26VEWE4A84;
 				INFOPLIST_FILE = FirebaseChatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -821,6 +875,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonik.FirebaseChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirebaseChat.app/FirebaseChat";
@@ -833,7 +888,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26VEWE4A84;
 				INFOPLIST_FILE = FirebaseChatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -842,6 +899,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonik.FirebaseChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FirebaseChat.app/FirebaseChat";
@@ -853,7 +911,9 @@
 			baseConfigurationReference = A86EAA8ACA9782EFDA1B1FB1 /* Pods-FirebaseChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26VEWE4A84;
 				INFOPLIST_FILE = FirebaseChatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -862,6 +922,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonik.FirebaseChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FirebaseChat;
@@ -873,7 +934,9 @@
 			baseConfigurationReference = 31503EC1502764639F91E83D /* Pods-FirebaseChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26VEWE4A84;
 				INFOPLIST_FILE = FirebaseChatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,6 +945,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonik.FirebaseChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FirebaseChat;

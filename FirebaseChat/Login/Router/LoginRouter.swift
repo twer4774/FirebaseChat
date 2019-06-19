@@ -22,7 +22,8 @@ class LoginRouter: LoginRouterProtocol {
     func gotoChatList(from view: UIViewController) {
         
         let chatListVC = view.storyboard?.instantiateViewController(withIdentifier: "ChatListView") as! ChatListView
-
+        //화면을 전환하기 전에, 다음 화면에 대한 모듈을 만들어준다.
+//        ChatListRouter.createChatListModule(chatListView: chatListVC)
         view.present(chatListVC, animated: true)
         
     }
