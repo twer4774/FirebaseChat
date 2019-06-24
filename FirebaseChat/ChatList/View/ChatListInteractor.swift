@@ -13,7 +13,7 @@ import FirebaseFirestore
 class ChatListInteractor: ChatListRequestInteractorProtocol {
     weak var presenter: ChatListResponseInteractorProtocol?
     var remoteDataManager: ChatListDataManagerInputProtocol?
-    var chatList = [Chat]()
+    var chatList = [Channels]()
     var db: Firestore!
     
     func getChatList() {
@@ -21,9 +21,13 @@ class ChatListInteractor: ChatListRequestInteractorProtocol {
         remoteDataManager?.getChatList()
     }
     
+    func addChannel(channelName: String){
+        remoteDataManager?.addChannelToFirestore(channelName: channelName)
+    }
+    
 }
 extension ChatListInteractor: ChatListDataManagerOutputProtocol {
-    func excuteFetchedCatList(with chatList: [Chat]){
+    func excuteFetchedCatList(with chatList: [Channels]){
         print("ChatListDataManagerOutputProtocol \(chatList)")
         presenter?.fetchedChatList(chatList: chatList)
         

@@ -18,14 +18,22 @@ class ChatListPresenter: ChatListPresenterProtocol {
         print("presenter viewDidLoad")
     }
     
-    func selectItem(with chat: Chat, from view: UIViewController) {
+    func createChannel(){
+        view?.alertCreateChannel()
+    }
+    
+    func createChannelAction(channelName: String){
+        interactor?.addChannel(channelName: channelName)
+    }
+    
+    func selectItem(with chat: Channels, from view: UIViewController) {
         router?.gotoChat(chat: chat, from: view)
     }
 
 }
 
 extension ChatListPresenter: ChatListResponseInteractorProtocol {
-    func fetchedChatList(chatList: [Chat]) {
+    func fetchedChatList(chatList: [Channels]) {
         print("presenter chatList : \(chatList)")
         self.view?.showChatList(with: chatList)
     }

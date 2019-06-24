@@ -9,7 +9,8 @@
 import UIKit
 
 protocol ChatListViewProtocol: class {
-    func showChatList(with chatList: [Chat])
+    func showChatList(with chatList: [Channels])
+    func alertCreateChannel()
 }
 
 protocol ChatListRequestInteractorProtocol: class {
@@ -17,10 +18,11 @@ protocol ChatListRequestInteractorProtocol: class {
     var remoteDataManager: ChatListDataManagerInputProtocol? { get set }
     
     func getChatList()
+    func addChannel(channelName: String)
 }
 
 protocol ChatListResponseInteractorProtocol: class {
-    func fetchedChatList(chatList: [Chat])
+    func fetchedChatList(chatList: [Channels])
 }
 
 protocol ChatListPresenterProtocol: class {
@@ -29,13 +31,15 @@ protocol ChatListPresenterProtocol: class {
     var router: ChatListRouterProtocol? { get set }
     
     func viewDidLoad()
-    func selectItem(with chat: Chat, from view: UIViewController)
+    func createChannel()
+    func createChannelAction(channelName: String)
+    func selectItem(with chat: Channels, from view: UIViewController)
     
 }
 
 protocol ChatListRouterProtocol: class {
     static func createChatListModule(chatListView: ChatListView)
-    func gotoChat(chat: Chat, from view: UIViewController)
+    func gotoChat(chat: Channels, from view: UIViewController)
 }
 
 protocol ChatListDataManagerInputProtocol: class {
@@ -43,7 +47,9 @@ protocol ChatListDataManagerInputProtocol: class {
     var remoteRequestHandler: ChatListDataManagerOutputProtocol? { get set }
     
     func getChatList()
-    func getData() -> [Chat]
+    func getData() -> [Channels]
+    
+    func addChannelToFirestore(channelName: String)
 }
 
 protocol ChatListDataManagerOutputProtocol: class {
@@ -52,6 +58,6 @@ protocol ChatListDataManagerOutputProtocol: class {
 //    func showError(error:String)
 //    func getAllDetail(data: [String:Any]?)
 
-    func excuteFetchedCatList(with chatList: [Chat])
+    func excuteFetchedCatList(with chatList: [Channels])
     
 }

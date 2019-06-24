@@ -7,27 +7,55 @@
 //
 
 import UIKit
+import FirebaseUI
+import FirebaseFirestore
 
 class ChatListView: UIViewController {
 
     @IBOutlet weak var tbChatList: UITableView!
-
+    @IBOutlet weak var btnCreateChannel: UIBarButtonItem!
+    
     var presenter: ChatListPresenterProtocol?
-    var chatList: [Chat]?
+    var chatList: [Channels]?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ChatListRouter.createChatListModule(chatListView: self)
-//        chatList?.removeAll()
+        chatList?.removeAll()
         presenter?.viewDidLoad()
     }
+    
 }
 
 extension ChatListView: ChatListViewProtocol {
-    func showChatList(with chatList: [Chat]) {
+    func showChatList(with chatList: [Channels]) {
         self.chatList = chatList
         tbChatList.reloadData()
         print("view chatList: \(chatList)")
+    }
+    
+    func alertCreateChannel() {
+        let alert = UIAlertController(title: "Create Channel", message: "Enter Channel Name", preferredStyle: .alert)
+        
+        alert.addTextField { (tf) in
+            tf.placeholder = "Please enter a channel name to add"
+        }
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (result) in
+            self.presenter?.createChannelAction(channelName: alert.textFields![0].text!)
+        }))
+        
+        self.present(alert, animated: true)
+    }
+}
+
+extension ChatListView {
+    @IBAction func btnCreateChannel(_ sender: Any) {
+        presenter?.createChannel()
     }
 }
 
@@ -48,7 +76,7 @@ extension ChatListView: UITableViewDelegate, UITableViewDataSource {
         }
         
         if let chatList = self.chatList {
-            cell.chatName.text = chatList[indexPath.row].chatName
+            cell.chatName.text = chatList[indexPath.row].dictionary["roomId"] as! String
         } else {
             cell.chatName.text = "ChatName"
         }

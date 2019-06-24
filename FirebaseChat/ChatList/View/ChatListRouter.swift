@@ -33,7 +33,7 @@ class ChatListRouter: ChatListRouterProtocol {
         
     }
     
-    func gotoChat(chat: Chat, from view: UIViewController) {
+    func gotoChat(chat: Channels, from view: UIViewController) {
         let chatVC = view.storyboard?.instantiateViewController(withIdentifier: "ChatDetailView") as! ChatDetailView
         
 //        ChatDetailRouter.

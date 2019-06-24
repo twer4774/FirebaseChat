@@ -13,42 +13,71 @@ import Firebase
 class ChatListDataManager: ChatListDataManagerInputProtocol {
     var remoteRequestHandler: ChatListDataManagerOutputProtocol?
     var db: Firestore!
-    var chatList = [Chat]()
+    var chatList = [Channels]()
     
     func getChatList(){
         
+        self.chatList.removeAll()
         self.chatList = getData()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.remoteRequestHandler?.excuteFetchedCatList(with: self.chatList)
         }
  
     }
-    func getData() -> [Chat]{
+    func getData() -> [Channels]{
         
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         
         db = Firestore.firestore()
         
-        db.collection("chat2").order(by: "roomId").getDocuments
+        db.collection("chat2").limit(to: 50).order(by: "roomId").getDocuments
             { (document, error) in
-                
+
                 if let error = error
                 {
                     print("error: \(error.localizedDescription)")
                 } else {
-                    
+
                     for document in document!.documents{
                         print("doucuments: \(document.documentID) -> \(document.data())")
-                        self.chatList.append(Chat(chatName: document.documentID))
+//                        self.chatList.append(Chat(chatName: document.documentID))
+                        self.chatList.append(Channels(dictionary: document.data())!)
                     }
-                    
+
                 }
         }
         
+        /*
+        let test = db.collection("chat").document("room1").collection("group")
+        print("test: \(test)")
+        
+        test.getDocuments { (document, error) in
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            } else {
+                for document in document!.documents{
+                    print("doucment: \(document.documentID) => \(document.data())")
+    
+                }
+            }
+        }
+        */
         return self.chatList
     }
     
+    
+    func addChannelToFirestore(channelName: String){
+        let collection = Firestore.firestore().collection("chat2")
+        
+        let channel = Channels(roomId: channelName)
+        
+        collection.addDocument(data: channel.dictionary)
+        
+        DispatchQueue.main.async {
+            self.getChatList()
+        }
+    }
     
     
 }

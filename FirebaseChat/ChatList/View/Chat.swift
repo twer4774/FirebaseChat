@@ -15,3 +15,21 @@ struct Chat {
     }
     
 }
+
+struct Channels{
+    var roomId: String    
+    var dictionary: [String: Any]{
+        return [
+            "roomId": roomId
+        ]
+    }
+    
+    init(roomId: String){
+        self.roomId = roomId
+    }
+    init?(dictionary: [String: Any]){
+        guard let roomId = dictionary["roomId"] as? String else { return nil }
+        
+        self.init(roomId: roomId)
+    }
+}
