@@ -36,7 +36,8 @@ class ChatListRouter: ChatListRouterProtocol {
     func gotoChat(chat: Channels, from view: UIViewController) {
         let chatVC = view.storyboard?.instantiateViewController(withIdentifier: "ChatDetailView") as! ChatDetailView
         
-//        ChatDetailRouter.
+        ChatDetailRouter.createChatDetailModule(chatDetailView: chatVC, chat: chat)
+        view.navigationController?.pushViewController(chatVC, animated: true)
     }
 
 }

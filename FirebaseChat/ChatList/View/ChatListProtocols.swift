@@ -55,9 +55,6 @@ protocol ChatListDataManagerInputProtocol: class {
 protocol ChatListDataManagerOutputProtocol: class {
     //datamanager -> interactor
 
-//    func showError(error:String)
-//    func getAllDetail(data: [String:Any]?)
-
     func excuteFetchedCatList(with chatList: [Channels])
     
 }

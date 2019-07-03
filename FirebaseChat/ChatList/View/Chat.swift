@@ -8,7 +8,6 @@
 
 struct Chat {
     var chatName: String!
-//    var chatUsers: [String: String]!
     
     init(chatName: String){
         self.chatName = chatName
@@ -17,16 +16,24 @@ struct Chat {
 }
 
 struct Channels{
-    var roomId: String    
+    var roomId: String
+    var channelId: String?
+    
     var dictionary: [String: Any]{
         return [
-            "roomId": roomId
+            "roomId": roomId,
         ]
     }
     
     init(roomId: String){
         self.roomId = roomId
     }
+    
+    init(roomId: String, channelId: String?){
+        self.roomId = roomId
+        self.channelId = channelId
+    }
+    
     init?(dictionary: [String: Any]){
         guard let roomId = dictionary["roomId"] as? String else { return nil }
         

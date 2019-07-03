@@ -41,28 +41,20 @@ class ChatListDataManager: ChatListDataManagerInputProtocol {
 
                     for document in document!.documents{
                         print("doucuments: \(document.documentID) -> \(document.data())")
-//                        self.chatList.append(Chat(chatName: document.documentID))
-                        self.chatList.append(Channels(dictionary: document.data())!)
+                        
+                        let roomid = Channels(dictionary: document.data())
+                        let channel = Channels(roomId: roomid!.roomId, channelId: document.documentID)
+                        self.chatList.append(channel)
+//
+//                        self.chatList.append(Channels(dictionary: document.data())!)
+
+                        
+                        
                     }
 
                 }
         }
         
-        /*
-        let test = db.collection("chat").document("room1").collection("group")
-        print("test: \(test)")
-        
-        test.getDocuments { (document, error) in
-            if let error = error {
-                print("error: \(error.localizedDescription)")
-            } else {
-                for document in document!.documents{
-                    print("doucment: \(document.documentID) => \(document.data())")
-    
-                }
-            }
-        }
-        */
         return self.chatList
     }
     
