@@ -8,6 +8,21 @@
 
 import UIKit
 
-class ChatDetailInteractor {
+class ChatDetailInteractor: ChatDetailRequestInteractorProtocol {
+    var presenter: ChatDetailResponseInteractorProtocol?
+    var remoteDataManager: ChatDetailDataManagerInputProtocol?
     
+    func getMessageList() {
+        
+    }
+    
+    func addMessage(message: Message, chat: Channels) {
+        remoteDataManager?.addMessageToFirestore(message: message, chat: chat)
+    }
+}
+
+extension ChatDetailInteractor: ChatDetailDataManagerOutputProtocol {
+    func excuteFetchedMessageList(with messageList: [Message]) {
+        
+    }
 }
