@@ -77,7 +77,7 @@ extension AppDelegate: GIDSignInDelegate, GIDSignInUIDelegate {
                     guard let uid = user?.user.uid else { return }
                     print("Success: \(uid)")
                     self.userId = uid
-                    
+                    UserDefaults.standard.set(uid, forKey: "sender")
                 }
             }
         }

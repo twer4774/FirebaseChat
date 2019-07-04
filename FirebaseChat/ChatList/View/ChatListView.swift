@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseUI
 import FirebaseFirestore
+import GoogleSignIn
 
 class ChatListView: UIViewController {
 
@@ -26,6 +27,7 @@ class ChatListView: UIViewController {
         presenter?.viewDidLoad()
     }
     
+   
 }
 
 extension ChatListView: ChatListViewProtocol {
@@ -56,6 +58,15 @@ extension ChatListView: ChatListViewProtocol {
 extension ChatListView {
     @IBAction func btnCreateChannel(_ sender: Any) {
         presenter?.createChannel()
+    }
+    
+    @IBAction func btnLogOut(_ sender: Any) {
+        let auth = Auth.auth()
+        do {
+            try auth.signOut()
+        } catch {
+            
+        }
     }
 }
 

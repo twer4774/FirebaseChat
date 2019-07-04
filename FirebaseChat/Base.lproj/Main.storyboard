@@ -61,9 +61,20 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFC-P1-wnP">
-                                            <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                            <rect key="frame" x="209" y="7" width="185" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="LogOut"/>
+                                            <connections>
+                                                <action selector="btnLogOut:" destination="dTY-O1-fTk" eventType="touchUpInside" id="7rO-BR-LOg"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXq-s4-GMj">
+                                            <rect key="frame" x="20" y="6" width="102" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="CreateChannel"/>
+                                            <connections>
+                                                <action selector="btnCreateChannel:" destination="dTY-O1-fTk" eventType="touchUpInside" id="nlP-xc-16X"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -125,7 +136,7 @@
         <!--ChatDetailView-->
         <scene sceneID="lGK-Ac-Hfb">
             <objects>
-                <viewController storyboardIdentifier="ChatDetailView" title="ChatDetailView" id="WBh-0e-YpV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatDetailView" title="ChatDetailView" id="WBh-0e-YpV" customClass="ChatDetailView" customModule="FirebaseChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zm2-aL-PSc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

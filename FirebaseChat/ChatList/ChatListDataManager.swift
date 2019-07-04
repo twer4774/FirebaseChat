@@ -45,11 +45,7 @@ class ChatListDataManager: ChatListDataManagerInputProtocol {
                         let roomid = Channels(dictionary: document.data())
                         let channel = Channels(roomId: roomid!.roomId, channelId: document.documentID)
                         self.chatList.append(channel)
-//
-//                        self.chatList.append(Channels(dictionary: document.data())!)
 
-                        
-                        
                     }
 
                 }

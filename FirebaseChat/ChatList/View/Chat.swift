@@ -29,7 +29,7 @@ struct Channels{
         self.roomId = roomId
     }
     
-    init(roomId: String, channelId: String?){
+    init(roomId: String, channelId: String){
         self.roomId = roomId
         self.channelId = channelId
     }
