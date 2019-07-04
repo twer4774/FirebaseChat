@@ -18,7 +18,7 @@ protocol ChatDetailRequestInteractorProtocol: class {
     var presenter: ChatDetailResponseInteractorProtocol? { get set }
     var remoteDataManager: ChatDetailDataManagerInputProtocol? { get set }
     
-    func getMessageList()
+    func getMessageList(channel: Channels)
     func addMessage(message: Message, chat: Channels)
 }
 
@@ -32,7 +32,6 @@ protocol ChatDetailPresenterProtocol: class {
     var router: ChatDetailRouterProtocol? { get set }
     
     func viewDidLoad()
-    func showChatMessage(with chatMessage: [Message], from view: UIViewController)
     func sendMessage(message: Message)
     func gotoChatList(from view: UIViewController)
 }
@@ -46,8 +45,8 @@ protocol ChatDetailDataManagerInputProtocol: class {
     //interactor -> datamanager
     var remoteDataManager: ChatDetailDataManagerOutputProtocol? { get set }
     
-    func getMessageList()
-    func getData() -> [Message]
+    func getMessageList(channel: Channels)
+    func getData(channel: Channels) -> [Message]
     func addMessageToFirestore(message: Message, chat: Channels)
 }
 

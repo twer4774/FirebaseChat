@@ -12,8 +12,8 @@ class ChatDetailInteractor: ChatDetailRequestInteractorProtocol {
     var presenter: ChatDetailResponseInteractorProtocol?
     var remoteDataManager: ChatDetailDataManagerInputProtocol?
     
-    func getMessageList() {
-        
+    func getMessageList(channel: Channels) {
+        remoteDataManager?.getMessageList(channel: channel)
     }
     
     func addMessage(message: Message, chat: Channels) {
@@ -23,6 +23,6 @@ class ChatDetailInteractor: ChatDetailRequestInteractorProtocol {
 
 extension ChatDetailInteractor: ChatDetailDataManagerOutputProtocol {
     func excuteFetchedMessageList(with messageList: [Message]) {
-        
+        presenter?.fetchedMessageList(messages: messageList)
     }
 }

@@ -18,10 +18,8 @@ class ChatDetailPresenter: ChatDetailPresenterProtocol {
     func viewDidLoad() {
         
         view?.showTitle(with: chat!)
-    }
-    
-    func showChatMessage(with chatMessage: [Message], from view: UIViewController) {
         
+        interactor?.getMessageList(channel: chat!)
     }
     
     func gotoChatList(from view: UIViewController) {
@@ -35,7 +33,7 @@ class ChatDetailPresenter: ChatDetailPresenterProtocol {
 
 extension ChatDetailPresenter: ChatDetailResponseInteractorProtocol {
     func fetchedMessageList(messages: [Message]) {
-        
+        view?.showMessageList(messages: messages)
     }
     
 }
